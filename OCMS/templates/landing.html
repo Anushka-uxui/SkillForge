@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillForge API Backend</title>
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --bg: #F9FAFB;
+            --surface: #FFFFFF;
+            --text-main: #111827;
+            --text-muted: #6B7280;
+            --border: #E5E7EB;
+            --success: #10B981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #ECFDF5;
+            color: #065F46;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid #A7F3D0;
+            margin-bottom: 2rem;
+        }
+
+        .description {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border);
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .tag {
+            background: var(--bg);
+            color: var(--text-main);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .links-section {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1 class="title">SkillForge</h1>
+            <p class="subtitle">Role-Based Learning Management System</p>
+            <div class="badge">
+                ✅ Backend Running
+            </div>
+            <p class="description">
+                A robust, production-ready backend API built with Django REST Framework, providing comprehensive endpoints for course management, enrollments, and analytics.
+            </p>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <h2>🛠️ Tech Stack</h2>
+                <div class="tag-list">
+                    <span class="tag">Django</span>
+                    <span class="tag">Django REST Framework</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">JWT Authentication</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Swagger/OpenAPI</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>✨ Core Features</h2>
+                <ul class="feature-list">
+                    <li>🔐 Role-Based Access (Admin, Instructor, Student)</li>
+                    <li>📚 Course Management</li>
+                    <li>🎓 Student Enrollment</li>
+                    <li>⭐ Course Reviews</li>
+                    <li>📊 Instructor Analytics Dashboard</li>
+                    <li>✉️ Email Notifications</li>
+                    <li>🛡️ Secure REST APIs</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="links-section">
+            <h2>Quick Links</h2>
+            <div class="button-group">
+                <a href="/api/schema/swagger-ui/" class="btn btn-primary">📘 Swagger Documentation</a>
+                <a href="/api/schema/redoc/" class="btn btn-secondary">📖 ReDoc Documentation</a>
+                <a href="/api/schema/" class="btn btn-secondary">⚙️ OpenAPI Schema</a>
+                <a href="/admin/" class="btn btn-secondary">🛠️ Django Admin</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>SkillForge &copy; 2026</p>
+            <p style="font-size: 0.875rem; margin-top: 0.5rem;">Backend API built using Django REST Framework</p>
+        </footer>
+    </div>
+</body>
+</html>
